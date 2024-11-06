@@ -10,4 +10,13 @@ class CepController
         header('Content-Type: application/json');
         echo json_encode($result);
     }
+
+    public function getRandomCep()
+    {
+        $cepService = new CepService();
+        $randomCepData = $cepService->randomCep();
+        header('Content-Type: application/json');
+        echo json_encode($randomCepData);
+    }
+
 }
