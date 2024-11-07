@@ -19,7 +19,6 @@
       <p><strong>Região:</strong> {{ cepData.regiao }}</p>
       <p><strong>DDD:</strong> {{ cepData.ddd }}</p>
     </div>
-    <p v-else-if="cep.length === 8 && !cepData">CEP não encontrado.</p>
   </div>
 </template>
 
