@@ -5,7 +5,16 @@ class CepService
     {
         $url = "https://viacep.com.br/ws/{$cep}/json/";
         $response = file_get_contents($url);
-        return json_decode($response, true);
+
+        // Verificar se a resposta é JSON válido
+        $cepData = json_decode($response, true);
+
+        // Se a resposta não for JSON ou contiver erro, retornar null ou mensagem padrão
+        if (json_last_error() !== JSON_ERROR_NONE || isset($cepData['erro'])) {
+            return null; 
+        }
+
+        return $cepData;
     }
 
     public function randomCep()
@@ -17,7 +26,7 @@ class CepService
         $cepData = $this->fetchCepData($cep);
 
         // Se o CEP não existir (a API ViaCEP pode retornar um erro), tente novamente
-        while (isset($cepData['erro'])) {
+        while ($cepData === null) {
             // Gera um novo CEP
             $cep = str_pad(rand(1000000, 99999999), 8, '0', STR_PAD_LEFT);
             $cepData = $this->fetchCepData($cep);
@@ -25,5 +34,4 @@ class CepService
 
         return $cepData;
     }
-
 }

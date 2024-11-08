@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from './components/HelloWorld.vue'
+import Home from './components/HomePage.vue' //Página inicial
 import RandomCep from './components/RandomCep.vue' // Página para buscar CEP aleatório
 
 const routes = [

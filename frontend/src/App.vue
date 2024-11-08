@@ -1,11 +1,8 @@
 <template>
   <div id="app">
-    <!-- Logo ou imagem -->
     <img alt="Vue logo" src="./assets/logo.png" />
-
-
     <!-- Link para navegar para a página de buscar CEP aleatório -->
-     <br>
+    <br>
     <router-link v-if="$route.path !== '/' " to="/">Voltar para a página inicial</router-link>
     <br>
     <router-link v-if="$route.path !== '/random-cep'" to="/random-cep">Ir para Buscar CEP Aleatório</router-link>
@@ -17,8 +14,6 @@
 
 
 <script>
-// Aqui você pode importar outros componentes caso necessário, mas no seu caso, como você está utilizando rotas,
-// os componentes já serão carregados no <router-view> automaticamente.
 export default {
   name: 'App',
 }
