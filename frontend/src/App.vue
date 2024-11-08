@@ -3,18 +3,18 @@
     <!-- Logo ou imagem -->
     <img alt="Vue logo" src="./assets/logo.png" />
 
-    <!-- Título principal -->
-    <h1>Consulta de CEP</h1>
 
     <!-- Link para navegar para a página de buscar CEP aleatório -->
-    <router-link to="/">Voltar para a página inicial</router-link>
+     <br>
+    <router-link v-if="$route.path !== '/' " to="/">Voltar para a página inicial</router-link>
     <br>
-    <router-link to="/random-cep">Ir para Buscar CEP Aleatório</router-link>
+    <router-link v-if="$route.path !== '/random-cep'" to="/random-cep">Ir para Buscar CEP Aleatório</router-link>
 
     <!-- Área onde o Vue Router irá renderizar as páginas conforme as rotas -->
     <router-view></router-view>
   </div>
 </template>
+
 
 <script>
 // Aqui você pode importar outros componentes caso necessário, mas no seu caso, como você está utilizando rotas,
@@ -43,6 +43,6 @@ button {
 
 a {
   text-decoration: none;
-  color: #42b983;
+  color: #1594cf;
 }
 </style>

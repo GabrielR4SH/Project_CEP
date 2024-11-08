@@ -68,6 +68,7 @@ button {
   border-top-color: #333;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  margin: 0 auto; /* Centraliza o spinner */
 }
 
 @keyframes spin {
