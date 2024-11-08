@@ -26,6 +26,7 @@ Project_CEP/
 </ol>
 
 <hr>
-![imgteste](https://github.com/user-attachments/assets/c63319e4-6e8b-48f6-8fe7-333b8b3c69a1)
+![imgteste](frontend/src/assets/imgteste.png)
+
 
 Digite um CEP e aperte na lupa para realizar a consulta :)
