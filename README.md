@@ -24,3 +24,8 @@ Project_CEP/
   <li>Abra outro terminal, navegue até a pasta frontend: `/Project_CEP/frontend` e instale as dependências do frontend: <code>npm install</code></li>
   <li>Inicie o servidor de desenvolvimento do frontend: <code>npm run serve</code></li>
 </ol>
+
+<hr>
+![imgteste](https://github.com/user-attachments/assets/c63319e4-6e8b-48f6-8fe7-333b8b3c69a1)
+
+Digite um CEP e aperte na lupa para realizar a consulta :)
